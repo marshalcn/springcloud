@@ -3,32 +3,35 @@ spring:
     active:
     - dev
 ---
-server: 
+server:
   port: 7001
 spring:
   profiles: dev
   application:
-    name: springcloud-config-eureka-client
-eureka: 
-  instance: 
+    name: microservicecloud-config-eureka-client
+
+eureka:
+  instance:
     hostname: eureka7001.com
-  client: 
+  client:
     register-with-eureka: false
     fetch-registry: false
-    service-url: 
+    service-url:
       defaultZone: http://eureka7001.com:7001/eureka/
+
 ---
-server: 
+server:
   port: 7001
 spring:
   profiles: test
   application:
-    name: springcloud-config-eureka-client
-eureka: 
-  instance: 
+    name: microservicecloud-config-eureka-client
+
+eureka:
+  instance:
     hostname: eureka7001.com
-  client: 
+  client:
     register-with-eureka: false
     fetch-registry: false
-    service-url: 
+    service-url:
       defaultZone: http://eureka7001.com:7001/eureka/
